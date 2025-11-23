@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --bg-dark: #0b1020;
+  --card-dark: #121835;
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-white/5 backdrop-blur border border-gray-200/60 dark:border-white/10;
+}
+
+.sidebar-title {
+  @apply text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 px-3 mt-4 mb-2;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply btn bg-brand-600 text-white hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600;
+}
+
+.btn-ghost {
+  @apply btn bg-transparent hover:bg-gray-100 dark:hover:bg-white/5;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-white/10 rounded-full hover:bg-gray-400 dark:hover:bg-white/20 transition-colors;
+}
+
+/* Responsive markdown content inside bubbles */
+.markdown-body {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-body pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
